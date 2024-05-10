@@ -34,17 +34,18 @@ int main(void)
             DrawText("pos: ",10,20,20,GREEN);
             //grid
             
-                
+            
             // Draw the 3d grid, rotated 90 degrees and centered around 0,0 
             // just so we have something in the XY plane
             rlPushMatrix();
-            rlTranslatef(0, 25*50, 0);
+            rlTranslatef(0, 64*16, 0);
             rlRotatef(90, 1, 0, 0);
-            DrawGrid(128, 46);
+            DrawGrid(128, 64);
             rlPopMatrix();
+            DrawRectangleRec(player,ORANGE);
+
 
             
-            DrawRectangleRec(player,ORANGE);
         EndDrawing();
     }
 
